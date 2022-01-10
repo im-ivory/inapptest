@@ -9,22 +9,17 @@
 <body>
     <h1>hello world</h1>
     <script>
-document.addEventListener("DOMContentLoaded", ready);
-function ready(){
-
-    var Url = location.href;
-    var Agent = navigator.userAgent.toLowerCase();
-    //alert(Agent);
-    if(Agent.includes("kakao")){ 
-        location.href = 'kakaotalk://inappbrowser/close';
-        if(navigator.userAgent.match(/iPhone|iPad/i)){ 
-            console.log("");
-        }
-        else { 
-            location.href='intent://'+location.href.replace(/https?:\/\//i,'')+'#Intent;scheme=http;package=com.android.chrome;end';
-        }
-    }
-};
+ broswer.getBroswerName = function() {
+     //userAgent값을 모두 소문자로 변환하여 변수에 대입
+     var agt = navigator.userAgent.toLowerCase();
+     
+     if(agt.indexOf("chrome") != -1) {
+         alert("크롬입니다")
+     }
+     else if(agt.indexOf("samsungbrowser") != -1) {
+         alert("삼성인터넷입니다")
+     }
+ };
     </script>
 </body>
 </html>
