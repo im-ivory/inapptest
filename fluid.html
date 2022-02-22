@@ -23,28 +23,29 @@
         .circle{
             background-color: black;
             border-radius: 50%;
-            animation: rotate 8s linear infinite;
             margin:0;
             position:absolute;
             filter: blur(2px);
+            transform: scale(0.3);
         }
         .circle:first-child{
             width:70%;
             height:60%;
             top:7%;
             left:10%;
-            animation: rotate 5s linear infinite;
+            animation: rotate2 5s linear infinite;
         }
         .circle:nth-child(2){
-            width:42%;
-            height:37%;
-            top:12%;
-            right:20%;
+            width:60%;
+            height:55%;
+            top:17%;
+            right:22%;
+            animation: rotate 7s linear infinite;
         }
         .circle:nth-child(3){
             width:57%;
             height:47%;
-            animation: rotate2 8s linear infinite;
+            animation: rotate3 5s linear infinite;
             top:21%;
             left:5%;
         }
@@ -53,14 +54,14 @@
             width:50%;
             height:60%;
             left:12%;
-            animation: rotate2 6s linear infinite;
+            animation: rotate3 5s linear infinite;
         }
         .circle:nth-child(5){
             top:13%;
             width:60%; 
             height:45%;
-            left:4%;
-            animation: rotate2 8s linear infinite;
+            left:8%;
+            animation: rotate 5s linear infinite;
         }
         .circle:nth-child(5)::before{
             background: linear-gradient(45deg, black, rgb(36, 36, 36));
@@ -74,12 +75,20 @@
 
         @keyframes rotate{
         0% {transform:  rotate(0deg)}
+        50% {transform: rotate(-360deg) scale(1.2)}
         100% {transform:  rotate(-720deg)}
         }
         @keyframes rotate2{
+        0% {transform:  rotate(0deg) scale(0.3)}
+        50% {transform: rotate(360deg) scale(1.2)}
+        100% {transform:  rotate(720deg) scale(0.3)}
+        }
+        @keyframes rotate3{
         0% {transform:  rotate(0deg)}
+        50% {transform: rotate(360deg) scale(1.2)}
         100% {transform:  rotate(720deg)}
         }
+
 
     </style>
 </head>
