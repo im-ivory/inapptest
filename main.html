@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+/* 첫 화면 */
+.main-container {
+  width: 100%;
+  max-width: 100vw;
+  height: calc(var(--outervh, 1vh) * 90);
+  margin-bottom: calc(var(--outervh, 1vh) * 110);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: url(#gooey);
+  -webkit-filter: url(#gooey);
+  overflow-x: hidden;
+}
+
+.main-title {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  font-family: "Nanum Myeongjo", serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 75px;
+  color: white;
+}
+
+.main-subtitle {
+  position: absolute;
+  bottom: 16%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  font-family: 'Nanum Myeongjo', serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 180%;
+  text-align: center;
+  letter-spacing: -0.05em;
+  width: max-content;
+}
+
+.icon_scroll { position: absolute; left: 50%; bottom: 70px; display: block; width: 18px; height: 56px; margin-left: -9px; background: url('../images/common/icon_scroll.png') no-repeat 0 0; z-index: 10; -webkit-animation: pulse 1s infinite; animation: pulse 1s infinite; filter: brightness(0); } 
+
+@-webkit-keyframes pulse { 
+ 0% { -webkit-transform:translate(0, 0); transform:translate(0, 0); } 
+ 50% { -webkit-transform:translate(0, 10px); transform:translate(0, 10px); } 
+ 100% { -webkit-transform:translate(0, 0); transform:translate(0, 0); } 
+ }
+@keyframes pulse { 
+ 0% { -webkit-transform:translate(0, 0); transform:translate(0, 0); } 
+ 50% { -webkit-transform:translate(0, 10px); transform:translate(0, 10px); } 
+ 100% { -webkit-transform:translate(0, 0); transform:translate(0, 0); } 
+ }
+
+.main-container .circle {
+  position: absolute;
+  min-width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.main-container .circle:before {
+  position: absolute;
+  content: "";
+  top: -50px;
+  left: -50px;
+  bottom: -50px;
+  right: -50px;
+  border-radius: 50%;
+  background: #fff;
+  z-index: -1;
+  filter: blur(50px);
+}
+
+.main-container .circle.circle1,
+.main-container .circle.circle1:before {
+  background: linear-gradient(90deg, black, rgba(0, 0, 0, 0.9));
+}
+
+.main-container .circle.circle2,
+.main-container .circle.circle2:before {
+  background: linear-gradient(90deg, black, rgba(0, 0, 0, 0.9));
+}
+
+.main-container .circle.circle3,
+.main-container .circle.circle3:before {
+  background: linear-gradient(90deg, black, rgba(0, 0, 0, 0.9));
+}
+
+.main-container .circle.circle4,
+.main-container .circle.circle4:before {
+  background: linear-gradient(90deg, black, rgba(0, 0, 0, 0.9));
+}
+
+.main-container .circle.circle5,
+.main-container .circle.circle5:before {
+  background: linear-gradient(90deg, black, rgb(36, 36, 36));
+}
+
+.main-container .circle.circle1 {
+  animation: animate1 6s linear infinite;
+}
+@keyframes animate1 {
+  0% {
+    transform: translate(25px, -50px) rotate(0deg);
+  }
+  25% {
+    transform: translate(0px, -25px) rotate(180deg);
+  }
+  50% {
+    transform: translate(25px, 0px) rotate(360deg);
+  }
+  75% {
+    transform: translate(50px, -25px) rotate(540deg);
+  }
+  100% {
+    transform: translate(25px, -50px) rotate(720deg);
+  }
+}
+
+.main-container .circle.circle2 {
+  animation: animate2 6s linear infinite;
+}
+@keyframes animate2 {
+  0% {
+    transform: translate(-50px, 50px) rotate(0deg);
+  }
+  25% {
+    transform: translate(-50px, 0px) rotate(180deg);
+  }
+  50% {
+    transform: translate(0px, 0px) rotate(360deg);
+  }
+  75% {
+    transform: translate(0px, 50px) rotate(540deg);
+  }
+  100% {
+    transform: translate(-50px, 50px) rotate(720deg);
+  }
+}
+
+.main-container .circle.circle3 {
+  animation: animate3 6s linear infinite;
+  width: 100px;
+}
+@keyframes animate3 {
+  0% {
+    transform: translate(-100px, -25px) rotate(0deg);
+  }
+  100% {
+    transform: translate(-100px, -25px) rotate(-720deg);
+  }
+}
+
+.main-container .circle.circle4 {
+  animation: animate4 6s linear infinite;
+  width: 100px;
+}
+@keyframes animate4 {
+  0% {
+    transform: translate(100px, 0px) rotate(0deg);
+  }
+  100% {
+    transform: translate(100px, 0px) rotate(-720deg);
+  }
+}
+
+.main-container .circle.circle5 {
+  animation: animate5 6s linear infinite;
+  min-width: 15px;
+  height: 15px;
+}
+@keyframes animate5 {
+  0% {
+    transform: translate(0px, -200px) rotate(0deg);
+  }
+  100% {
+    transform: translate(0px, -200px) rotate(-720deg);
+  }
+}
+
+.main-container .circle.circle6 {
+  min-width: 20px;
+  height: 25px;
+  transform: translate(-125px, 100px);
+}
+
+.filter-svg {
+  width: 0;
+  height: 0;
+  /* width: 100%;
+  height:  calc(var(--outervh, 1vh) * 100); */
+}
+
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <!-- 웅덩이 gooey -->
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+        <div class="circle circle4"></div>
+        <div class="circle circle5"></div>
+    </div>
+    <div class="main-title">
+        웅덩이
+    </div>
+    <div class="main-subtitle">
+        10분 사이 엄마와 조카가 죽었다. <br> 물웅덩이만 봐도 '그 날'이 떠오른다.
+    </div>
+    <span class="icon_scroll"></span>
+    <svg class="filter-svg" >
+        <defs>
+            <filter id="gooey">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" />
+                <feColorMatrix values="
+                1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 20 -10
+                "/>
+            </filter>
+        </defs>
+    </svg>
+</body>
+</html>
