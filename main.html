@@ -199,6 +199,12 @@
   transform: translate(-125px, 100px);
 }
 
+/* .filter-svg {
+  width: 0;
+  height: 0;
+  transform: translate(0,0);
+
+} */
 
     </style>
 </head>
@@ -219,7 +225,7 @@
     </div>
     <span class="icon_scroll"></span>
     <svg class="filter-svg" >
-            <filter id="gooey">
+            <filter id="gooey" x="-50%" width="200%" y="-50%" height="200%">
                 <feGaussianBlur in="SourceGraphic" stdDeviation="10" />
                 <feColorMatrix values="
                 1 0 0 0 0
