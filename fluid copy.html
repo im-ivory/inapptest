@@ -19,8 +19,8 @@
             display:flex;
             align-items: center;
             justify-content: center;
-            filter: blur(30px) contrast(20);
-            -webkit-filter: blur(30px) contrast(20);
+            filter: blur(10px) contrast(30);
+            -webkit-filter:blur(10px) contrast(30);
             background: rgb(255, 255, 255);
         }
         .circle{
@@ -29,7 +29,7 @@
             margin:0;
             position:absolute;
             /* filter: blur(2px); */
-            transform: scale(1);
+            /* transform: scale(1); */
         }
         .circle:first-child{
             width:70%;
@@ -78,18 +78,18 @@
 
         @keyframes rotate{
         0% {transform:  rotate(0deg)}
-        50% {transform: rotate(180deg) scale(1.2)}
+        50% {transform: rotate(180deg)}
         100% {transform:  rotate(360deg)}
         }
         @keyframes rotate2{
-        0% {transform:  rotate(0deg) scale(1)}
-        50% {transform: rotate(360deg) scale(1.2)}
-        100% {transform:  rotate(720deg) scale(1)}
+        0% {transform:  rotate(0deg)}
+        50% {transform: rotate(360deg) }
+        100% {transform:  rotate(720deg)}
         }
         @keyframes rotate3{
-        0% {transform:  rotate(0deg)scale(1)}
-        50% {transform: rotate(360deg) scale(1.2)}
-        100% {transform:  rotate(720deg) scale(1)}
+        0% {transform:  rotate(0deg)}
+        50% {transform: rotate(360deg)}
+        100% {transform:  rotate(720deg)}
         }
 
         .main-title {
