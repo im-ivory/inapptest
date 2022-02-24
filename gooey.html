@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body {
+  /* background: #aaa; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrap {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  background: #aaa;
+  filter: blur(10px) contrast(30);
+}
+
+.ball {
+  position: absolute;
+  top: 30%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 200px;
+  background: #333;
+  border-radius: 50%;
+}
+
+.ball:first-child {
+    left: 30%;
+    animation: ani-1 6s linear infinite;
+  }
+  .ball:nth-child(2) {
+      width:170px;
+    left: 60%;
+    animation: ani-1 6s linear infinite;
+  }
+  .ball:last-child {
+    left: 50%;
+    animation: ani-2 6s linear infinite;
+  }
+  
+
+@keyframes ani-1 {
+    0% {transform:  rotate(0deg)}
+        50% {transform: rotate(180deg) scale(1.2)}
+        100% {transform:  rotate(360deg)}
+}
+
+
+@keyframes ani-2 {
+    0% {transform:  rotate(0deg) scale(0.3)}
+        50% {transform: rotate(360deg) scale(1.2)}
+        100% {transform:  rotate(720deg) scale(0.3)}
+}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+    </div>
+</body>
+</html>
