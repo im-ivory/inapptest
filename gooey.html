@@ -6,22 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-body {
-  /* background: #aaa; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.wrap {
-  position: relative;
-  width: 600px;
-  height: 400px;
-  background: #aaa;
+.main-container {
+  width: 300px;
+  height: 300px;
+  position:absolute;
+  top:40%;
+  left:50%;
+  transform: translate(-50%, -50%);
   filter: blur(10px) contrast(30);
+  background: #aaa;
+  overflow:hidden;
 }
 
-.ball {
+.main-title {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  font-family: "Nanum Myeongjo", serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 75px;
+  color: white;
+}
+
+.main-subtitle {
+  position: absolute;
+  bottom: 16%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  font-family: 'Nanum Myeongjo', serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 180%;
+  text-align: center;
+  letter-spacing: -0.05em;
+  width: max-content;
+}
+
+
+.circle {
   position: absolute;
   top: 30%;
   transform: translate(-50%, -50%);
@@ -31,33 +60,34 @@ body {
   border-radius: 50%;
 }
 
-.ball:first-child {
+.circle:first-child {
     left: 30%;
     animation: ani-1 6s linear infinite;
   }
-  .ball:nth-child(2) {
+  .circle:nth-child(2) {
       width:170px;
-    left: 37%;
+    left: 29%;
     animation: ani-3 6s linear infinite;
   }
-  .ball:nth-child(3) {
-    left: 50%;
+  .circle:nth-child(3) {
+    left: 14%;
     height:180px;
     transform: scale(0.3);
     animation: ani-2 6s linear infinite;
   }
-  .ball:nth-child(4) {
+  .circle:nth-child(4) {
     left: 20%;
     width:130px;
     height:150px;
     /* transform: scale(0.3); */
     animation: ani-2 8s linear infinite;
   }
-  .ball:last-child {
+  .circle:last-child {
     left: 13%;
     width:30px;
     height:40px;
     animation: ani-3 8s linear infinite;
+    top:20%;
   }
   
 
@@ -81,12 +111,20 @@ body {
     </style>
 </head>
 <body>
-    <div class="wrap">
-        <div class="ball"></div>
-        <div class="ball"></div>
-        <div class="ball"></div>
-        <div class="ball"></div>
-        <div class="ball"></div>
+    <div class="main-container">
+        <!-- 웅덩이 gooey -->
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+        <div class="circle circle4"></div>
+        <div class="circle circle5"></div>
     </div>
+    <div class="main-title">
+        웅덩이
+    </div>
+    <div class="main-subtitle">
+        10분 사이 엄마와 조카가 죽었다. <br> 물웅덩이만 봐도 '그 날'이 떠오른다.
+    </div>
+    <span class="icon_scroll"></span>
 </body>
 </html>
